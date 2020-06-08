@@ -1,0 +1,9 @@
+# Runtime versions
+.ruby-version
+.node-version
+
+# package directories
+**/node_modules
+**/jspm_packages
+
+**/coverage

@@ -1,0 +1,35 @@
+{
+  "name": "bima-shark-on-lambda",
+  "version": "1.0.4",
+  "description": "Basic shared functionality for AWS Lambda + API-Gateway projects.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infopark-customers/bima-serverless"
+  },
+  "scripts": {
+    "test": "standard && mocha 'test/**/*-test.js' --reporter spec --timeout 500"
+  },
+  "keywords": [
+    "serverless",
+    "lambda"
+  ],
+  "author": {
+    "email": "joergen.dahlke@infopark.de"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bima-shark-sdk": "^2.1.1",
+    "honeybadger": "^1.3.0",
+    "http-status-codes": "^1.3.0",
+    "jsonapi-serializer": "^3.6.4",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "lambda-tester": "^3.5.0",
+    "mocha": "^5.2.0",
+    "nock": "^10.0.4",
+    "null-logger": "^1.0.0"
+  }
+}
