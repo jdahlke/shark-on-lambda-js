@@ -3,10 +3,6 @@
 process.env.NODE_ENV = 'test'
 
 const nock = require('nock')
-const nullLogger = require('null-logger')
-
-const Config = require('../src/config')
-Config.logger = nullLogger
 
 process.env.HMAC_ACCESS_KEY = 'access-key'
 process.env.HMAC_SECRET_KEY = 'secret-key'

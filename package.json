@@ -27,9 +27,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "lambda-tester": "^3.6.0",
+    "lambda-tester": "^4.0.1",
     "mocha": "^5.2.0",
-    "nock": "^10.0.4",
-    "null-logger": "^1.0.0"
+    "nock": "^10.0.4"
   }
 }
