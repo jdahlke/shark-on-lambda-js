@@ -15,6 +15,8 @@ const logger = new Logger()
  * @param {object} callback
  */
 async function authenticate (event, context, callback) {
+  logger.debug('Authentication: start ...')
+
   let serviceToken
 
   if (event.shark && event.shark.serviceToken) {
@@ -43,6 +45,8 @@ async function authenticate (event, context, callback) {
     logger.info(e)
     throw new ApiError(401, message)
   }
+
+  logger.debug('Authentication: ... finished')
 }
 
 module.exports = authenticate
