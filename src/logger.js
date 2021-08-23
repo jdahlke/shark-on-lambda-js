@@ -9,15 +9,35 @@ const Config = require('./config')
  */
 class Logger {
   /**
-   * Log message on console.info.
+   * Log message on console.error.
+   *
+   * @param {object} message
+   */
+  error (message) {
+    if (message) {
+      console.error(JSON.stringify(message, null, 2))
+    }
+  }
+
+  /**
+   * Log message on console.debug.
    *
    * @param {object} message
    */
   info (message) {
-    const logger = Config.logger || console
-
     if (message) {
-      logger.info(JSON.stringify(message, null, 2))
+      console.info(JSON.stringify(message, null, 2))
+    }
+  }
+
+  /**
+   * Log message on console.info.
+   *
+   * @param {object} message
+   */
+  debug (message) {
+    if (Config.debug && message) {
+      console.debug(JSON.stringify(message, null, 2))
     }
   }
 }
