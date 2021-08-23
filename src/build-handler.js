@@ -22,7 +22,7 @@ function buildHandler (handler, options = {}) {
   })
 
   const beforeActionsNames = (options.before || []).map(f => f.name)
-  logger.info(`Building handler '${handler.name}' with before: ${JSON.stringify(beforeActionsNames)}`)
+  logger.debug(`Building handler '${handler.name}' with before: ${JSON.stringify(beforeActionsNames)}`)
 
   return (event, context, callback) => {
     return controller.execute(event, context, callback)

@@ -16,9 +16,8 @@ Use environment variables in `process.env`.
 
 Key | Description
 ---- | ----
-`SLS_SERVICE` | (`String`) The application / service name.
-`SLS_STAGE` | (`String`) The service environment; usually `integration`, `staging` or `production`.
-`HB_API_KEY` | (`String`) The Honeybadger API key.
+`STAGE` | (`String`) The service environment; usually `integration`, `staging` or `production`.
+`HONEYBADGER_API_KEY` | (`String`) The Honeybadger API key.
 `DOORKEEPER_BASE_URL` | (`String`) The doorkeeper url for token validation; just protocol + host.
 `HMAC_ACCESS_KEY` | (`String`) The HMAC access key.
 `HMAC_SECRET_KEY` | (`String`) The HMAC secret key.

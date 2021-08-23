@@ -1,5 +1,10 @@
 ## Changelog
 
+
+#### 1.1.0
+- [break] use env `STAGE` instead of `SLS_STAGE`
+- [break] use env `HONEYBADGER_API_KEY` instead of `HB_API_KEY`
+
 #### 1.0.4
 - [fix] [`isAuthorized` should behave same as in Ruby](https://www.pivotaltracker.com/story/show/170028385)
   * [changes](https://github.com/infopark-customers/bima-serverless/commit/675483adb9734ed94b49af20633d7c563a081a15) might be rolled back with doorkeeper permission cleanup

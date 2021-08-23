@@ -12,32 +12,10 @@ const authenticate = require('./src/authenticate')
 const authorize = require('./src/authorize')
 const buildHandler = require('./src/build-handler')
 
-/**
- * Configure Honeybadger
- */
-function honeybadgerEnvironment () {
-  const value = process.env.SLS_STAGE
-
-  switch (value) {
-    case 'develop':
-      return 'development'
-    case 'integration':
-    case 'staging':
-    case 'production':
-      return value
-    default:
-      return 'unknown'
-  }
-}
-
 Honeybadger.configure({
-  apiKey: process.env.HB_API_KEY,
-  environment: honeybadgerEnvironment(),
+  apiKey: process.env.HONEYBADGER_API_KEY,
+  environment: process.env.STAGE || 'development',
   filters: ['password', 'token']
-})
-
-Honeybadger.setContext({
-  tags: process.env.SLS_SERVICE || 'Shark on Lambda'
 })
 
 module.exports = {
